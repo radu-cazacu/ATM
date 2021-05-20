@@ -1,0 +1,1403 @@
+{
+  "001" : {
+    "password" : "3925",
+    "ron" : 1600,
+    "dollar" : 85,
+    "euro" : 15,
+    "active" : 1
+  },
+  "002" : {
+    "password" : "1481",
+    "ron" : 4250,
+    "dollar" : 50,
+    "euro" : 315,
+    "active" : 1
+
+  },
+  "003" : {
+    "password" : "1451",
+    "ron" : 2000,
+    "dollar" : 210,
+    "euro" : 155,
+    "active" : 1
+  },
+  "004" : {
+    "password" : "4294",
+    "ron" : 4100,
+    "dollar" : 405,
+    "euro" : 450,
+    "active" : 1
+  },
+  "005" : {
+    "password" : "7206",
+    "ron" : 4600,
+    "dollar" : 340,
+    "euro" : 100,
+    "active" : 1
+  },
+  "006" : {
+    "password" : "3731",
+    "ron" : 850,
+    "dollar" : 335,
+    "euro" : 90,
+    "active" : 1
+  },
+  "007" : {
+    "password" : "4696",
+    "ron" : 2650,
+    "dollar" : 330,
+    "euro" : 155,
+    "active" : 1
+  },
+  "008" : {
+    "password" : "3923",
+    "ron" : 3150,
+    "dollar" : 45,
+    "euro" : 255,
+    "active" : 1
+  },
+  "009" : {
+    "password" : "6029",
+    "ron" : 1350,
+    "dollar" : 330,
+    "euro" : 305,
+    "active" : 1
+  },
+  "010" : {
+    "password" : "9734",
+    "ron" : 3600,
+    "dollar" : 25,
+    "euro" : 225,
+    "active" : 1
+  },
+  "011" : {
+    "password" : "0466",
+    "ron" : 4100,
+    "dollar" : 50,
+    "euro" : 125,
+    "active" : 1
+  },
+  "012" : {
+    "password" : "5690",
+    "ron" : 4400,
+    "dollar" : 435,
+    "euro" : 15,
+    "active" : 1
+  },
+  "013" : {
+    "password" : "4120",
+    "ron" : 4400,
+    "dollar" : 5,
+    "euro" : 15,
+    "active" : 1
+  },
+  "014" : {
+    "password" : "0938",
+    "ron" : 3250,
+    "dollar" : 60,
+    "euro" : 270,
+    "active" : 1
+  },
+  "015" : {
+    "password" : "9247",
+    "ron" : 4400,
+    "dollar" : 375,
+    "euro" : 215,
+    "active" : 1
+  },
+  "016" : {
+    "password" : "5444",
+    "ron" : 2700,
+    "dollar" : 120,
+    "euro" : 455,
+    "active" : 1
+  },
+  "017" : {
+    "password" : "5984",
+    "ron" : 4650,
+    "dollar" : 0,
+    "euro" : 100,
+    "active" : 1
+  },
+  "018" : {
+    "password" : "7759",
+    "ron" : 2200,
+    "dollar" : 385,
+    "euro" : 480,
+    "active" : 1
+  },
+  "019" : {
+    "password" : "3083",
+    "ron" : 3000,
+    "dollar" : 430,
+    "euro" : 365,
+    "active" : 1
+  },
+  "020" : {
+    "password" : "5762",
+    "ron" : 2350,
+    "dollar" : 410,
+    "euro" : 100,
+    "active" : 1
+  },
+  "021" : {
+    "password" : "6984",
+    "ron" : 1400,
+    "dollar" : 170,
+    "euro" : 465,
+    "active" : 1
+  },
+  "022" : {
+    "password" : "2741",
+    "ron" : 1400,
+    "dollar" : 115,
+    "euro" : 50,
+    "active" : 1
+  },
+  "023" : {
+    "password" : "1770",
+    "ron" : 4150,
+    "dollar" : 300,
+    "euro" : 190,
+    "active" : 1
+  },
+  "024" : {
+    "password" : "4961",
+    "ron" : 4600,
+    "dollar" : 10,
+    "euro" : 80,
+    "active" : 1
+  },
+  "025" : {
+    "password" : "6562",
+    "ron" : 2250,
+    "dollar" : 370,
+    "euro" : 385,
+    "active" : 1
+  },
+  "026" : {
+    "password" : "2247",
+    "ron" : 4900,
+    "dollar" : 35,
+    "euro" : 40,
+    "active" : 1
+  },
+  "027" : {
+    "password" : "3792",
+    "ron" : 3350,
+    "dollar" : 440,
+    "euro" : 165,
+    "active" : 1
+  },
+  "028" : {
+    "password" : "2766",
+    "ron" : 4700,
+    "dollar" : 135,
+    "euro" : 230,
+    "active" : 1
+  },
+  "029" : {
+    "password" : "2221",
+    "ron" : 3850,
+    "dollar" : 180,
+    "euro" : 45,
+    "active" : 1
+  },
+  "030" : {
+    "password" : "2125",
+    "ron" : 100,
+    "dollar" : 445,
+    "euro" : 135,
+    "active" : 1
+  },
+  "031" : {
+    "password" : "5068",
+    "ron" : 4250,
+    "dollar" : 90,
+    "euro" : 450,
+    "active" : 1
+  },
+  "032" : {
+    "password" : "9064",
+    "ron" : 2500,
+    "dollar" : 55,
+    "euro" : 170,
+    "active" : 1
+  },
+  "033" : {
+    "password" : "8941",
+    "ron" : 1950,
+    "dollar" : 450,
+    "euro" : 285,
+    "active" : 1
+  },
+  "034" : {
+    "password" : "9677",
+    "ron" : 3800,
+    "dollar" : 45,
+    "euro" : 195,
+    "active" : 1
+  },
+  "035" : {
+    "password" : "2984",
+    "ron" : 1150,
+    "dollar" : 135,
+    "euro" : 190,
+    "active" : 1
+  },
+  "036" : {
+    "password" : "5062",
+    "ron" : 750,
+    "dollar" : 305,
+    "euro" : 45,
+    "active" : 1
+  },
+  "037" : {
+    "password" : "7336",
+    "ron" : 2450,
+    "dollar" : 375,
+    "euro" : 495,
+    "active" : 1
+  },
+  "038" : {
+    "password" : "1813",
+    "ron" : 550,
+    "dollar" : 320,
+    "euro" : 5,
+    "active" : 1
+  },
+  "039" : {
+    "password" : "9343",
+    "ron" : 400,
+    "dollar" : 310,
+    "euro" : 315,
+    "active" : 1
+  },
+  "040" : {
+    "password" : "1956",
+    "ron" : 4650,
+    "dollar" : 465,
+    "euro" : 280,
+    "active" : 1
+  },
+  "041" : {
+    "password" : "5486",
+    "ron" : 3200,
+    "dollar" : 220,
+    "euro" : 455,
+    "active" : 1
+  },
+  "042" : {
+    "password" : "8442",
+    "ron" : 4750,
+    "dollar" : 445,
+    "euro" : 105,
+    "active" : 1
+  },
+  "043" : {
+    "password" : "4974",
+    "ron" : 3250,
+    "dollar" : 435,
+    "euro" : 190,
+    "active" : 1
+  },
+  "044" : {
+    "password" : "5633",
+    "ron" : 4400,
+    "dollar" : 125,
+    "euro" : 410,
+    "active" : 1
+  },
+  "045" : {
+    "password" : "0333",
+    "ron" : 900,
+    "dollar" : 120,
+    "euro" : 100,
+    "active" : 1
+  },
+  "046" : {
+    "password" : "3140",
+    "ron" : 4650,
+    "dollar" : 235,
+    "euro" : 400,
+    "active" : 1
+  },
+  "047" : {
+    "password" : "4392",
+    "ron" : 4100,
+    "dollar" : 425,
+    "euro" : 465,
+    "active" : 1
+  },
+  "048" : {
+    "password" : "0616",
+    "ron" : 1600,
+    "dollar" : 180,
+    "euro" : 380,
+    "active" : 1
+  },
+  "049" : {
+    "password" : "3388",
+    "ron" : 3750,
+    "dollar" : 170,
+    "euro" : 470,
+    "active" : 1
+  },
+  "050" : {
+    "password" : "5223",
+    "ron" : 1150,
+    "dollar" : 15,
+    "euro" : 25,
+    "active" : 1
+  },
+  "051" : {
+    "password" : "0908",
+    "ron" : 1900,
+    "dollar" : 345,
+    "euro" : 25,
+    "active" : 1
+  },
+  "052" : {
+    "password" : "8741",
+    "ron" : 1450,
+    "dollar" : 55,
+    "euro" : 90,
+    "active" : 1
+  },
+  "053" : {
+    "password" : "9031",
+    "ron" : 4350,
+    "dollar" : 195,
+    "euro" : 125,
+    "active" : 1
+  },
+  "054" : {
+    "password" : "8577",
+    "ron" : 100,
+    "dollar" : 330,
+    "euro" : 195,
+    "active" : 1
+  },
+  "055" : {
+    "password" : "6322",
+    "ron" : 1850,
+    "dollar" : 295,
+    "euro" : 125,
+    "active" : 1
+  },
+  "056" : {
+    "password" : "0177",
+    "ron" : 1850,
+    "dollar" : 325,
+    "euro" : 125,
+    "active" : 1
+  },
+  "057" : {
+    "password" : "5058",
+    "ron" : 3350,
+    "dollar" : 10,
+    "euro" : 145,
+    "active" : 1
+  },
+  "058" : {
+    "password" : "6829",
+    "ron" : 1100,
+    "dollar" : 90,
+    "euro" : 470,
+    "active" : 1
+  },
+  "059" : {
+    "password" : "8828",
+    "ron" : 50,
+    "dollar" : 325,
+    "euro" : 5,
+    "active" : 1
+  },
+  "060" : {
+    "password" : "0183",
+    "ron" : 1250,
+    "dollar" : 0,
+    "euro" : 420,
+    "active" : 1
+  },
+  "061" : {
+    "password" : "8336",
+    "ron" : 0,
+    "dollar" : 465,
+    "euro" : 280,
+    "active" : 1
+  },
+  "062" : {
+    "password" : "0548",
+    "ron" : 4600,
+    "dollar" : 175,
+    "euro" : 375,
+    "active" : 1
+  },
+  "063" : {
+    "password" : "0203",
+    "ron" : 2600,
+    "dollar" : 40,
+    "euro" : 420,
+    "active" : 1
+  },
+  "064" : {
+    "password" : "0420",
+    "ron" : 3750,
+    "dollar" : 90,
+    "euro" : 220,
+    "active" : 1
+  },
+  "065" : {
+    "password" : "4229",
+    "ron" : 3750,
+    "dollar" : 15,
+    "euro" : 195,
+    "active" : 1
+  },
+  "066" : {
+    "password" : "9893",
+    "ron" : 2000,
+    "dollar" : 190,
+    "euro" : 465,
+    "active" : 1
+  },
+  "067" : {
+    "password" : "0498",
+    "ron" : 300,
+    "dollar" : 410,
+    "euro" : 420,
+    "active" : 1
+  },
+  "068" : {
+    "password" : "8259",
+    "ron" : 1100,
+    "dollar" : 290,
+    "euro" : 170,
+    "active" : 1
+  },
+  "069" : {
+    "password" : "9265",
+    "ron" : 3400,
+    "dollar" : 405,
+    "euro" : 405,
+    "active" : 1
+  },
+  "070" : {
+    "password" : "6166",
+    "ron" : 4700,
+    "dollar" : 355,
+    "euro" : 395,
+    "active" : 1
+  },
+  "071" : {
+    "password" : "5855",
+    "ron" : 3750,
+    "dollar" : 360,
+    "euro" : 100,
+    "active" : 1
+  },
+  "072" : {
+    "password" : "7611",
+    "ron" : 4400,
+    "dollar" : 250,
+    "euro" : 195,
+    "active" : 1
+  },
+  "073" : {
+    "password" : "1929",
+    "ron" : 2450,
+    "dollar" : 30,
+    "euro" : 350,
+    "active" : 1
+  },
+  "074" : {
+    "password" : "1435",
+    "ron" : 4200,
+    "dollar" : 50,
+    "euro" : 445,
+    "active" : 1
+  },
+  "075" : {
+    "password" : "7452",
+    "ron" : 1800,
+    "dollar" : 385,
+    "euro" : 295,
+    "active" : 1
+  },
+  "076" : {
+    "password" : "5378",
+    "ron" : 2900,
+    "dollar" : 65,
+    "euro" : 370,
+    "active" : 1
+  },
+  "077" : {
+    "password" : "3315",
+    "ron" : 4200,
+    "dollar" : 305,
+    "euro" : 130,
+    "active" : 1
+  },
+  "078" : {
+    "password" : "8127",
+    "ron" : 800,
+    "dollar" : 420,
+    "euro" : 40,
+    "active" : 1
+  },
+  "079" : {
+    "password" : "9575",
+    "ron" : 4800,
+    "dollar" : 225,
+    "euro" : 475,
+    "active" : 1
+  },
+  "080" : {
+    "password" : "1844",
+    "ron" : 1250,
+    "dollar" : 390,
+    "euro" : 110,
+    "active" : 1
+  },
+  "081" : {
+    "password" : "4182",
+    "ron" : 4050,
+    "dollar" : 170,
+    "euro" : 465,
+    "active" : 1
+  },
+  "082" : {
+    "password" : "5658",
+    "ron" : 3450,
+    "dollar" : 325,
+    "euro" : 455,
+    "active" : 1
+  },
+  "083" : {
+    "password" : "2586",
+    "ron" : 650,
+    "dollar" : 100,
+    "euro" : 200,
+    "active" : 1
+  },
+  "084" : {
+    "password" : "9474",
+    "ron" : 4250,
+    "dollar" : 65,
+    "euro" : 95,
+    "active" : 1
+  },
+  "085" : {
+    "password" : "9821",
+    "ron" : 2500,
+    "dollar" : 115,
+    "euro" : 450,
+    "active" : 1
+  },
+  "086" : {
+    "password" : "9095",
+    "ron" : 1100,
+    "dollar" : 350,
+    "euro" : 5,
+    "active" : 1
+  },
+  "087" : {
+    "password" : "0128",
+    "ron" : 3650,
+    "dollar" : 250,
+    "euro" : 215,
+    "active" : 1
+  },
+  "088" : {
+    "password" : "2036",
+    "ron" : 1200,
+    "dollar" : 420,
+    "euro" : 450,
+    "active" : 1
+  },
+  "089" : {
+    "password" : "2552",
+    "ron" : 3650,
+    "dollar" : 355,
+    "euro" : 260,
+    "active" : 1
+  },
+  "090" : {
+    "password" : "4270",
+    "ron" : 3600,
+    "dollar" : 350,
+    "euro" : 110,
+    "active" : 1
+  },
+  "091" : {
+    "password" : "9768",
+    "ron" : 3900,
+    "dollar" : 370,
+    "euro" : 270,
+    "active" : 1
+  },
+  "092" : {
+    "password" : "2813",
+    "ron" : 4150,
+    "dollar" : 400,
+    "euro" : 90,
+    "active" : 1
+  },
+  "093" : {
+    "password" : "4489",
+    "ron" : 3650,
+    "dollar" : 135,
+    "euro" : 190,
+    "active" : 1
+  },
+  "094" : {
+    "password" : "6687",
+    "ron" : 550,
+    "dollar" : 460,
+    "euro" : 285,
+    "active" : 1
+  },
+  "095" : {
+    "password" : "2632",
+    "ron" : 850,
+    "dollar" : 185,
+    "euro" : 240,
+    "active" : 1
+  },
+  "096" : {
+    "password" : "8091",
+    "ron" : 3500,
+    "dollar" : 310,
+    "euro" : 450,
+    "active" : 1
+  },
+  "097" : {
+    "password" : "2387",
+    "ron" : 3850,
+    "dollar" : 425,
+    "euro" : 280,
+    "active" : 1
+  },
+  "098" : {
+    "password" : "0982",
+    "ron" : 650,
+    "dollar" : 305,
+    "euro" : 30,
+    "active" : 1
+  },
+  "099" : {
+    "password" : "2438",
+    "ron" : 2100,
+    "dollar" : 380,
+    "euro" : 345,
+    "active" : 1
+  },
+  "100" : {
+    "password" : "6209",
+    "ron" : 4300,
+    "dollar" : 150,
+    "euro" : 255,
+    "active" : 1
+  },
+  "101" : {
+    "password" : "1553",
+    "ron" : 4600,
+    "dollar" : 320,
+    "euro" : 355,
+    "active" : 1
+  },
+  "102" : {
+    "password" : "4607",
+    "ron" : 4750,
+    "dollar" : 420,
+    "euro" : 395,
+    "active" : 1
+  },
+  "103" : {
+    "password" : "4952",
+    "ron" : 1600,
+    "dollar" : 480,
+    "euro" : 245,
+    "active" : 1
+  },
+  "104" : {
+    "password" : "4213",
+    "ron" : 1300,
+    "dollar" : 320,
+    "euro" : 160,
+    "active" : 1
+  },
+  "105" : {
+    "password" : "5666",
+    "ron" : 400,
+    "dollar" : 495,
+    "euro" : 270,
+    "active" : 1
+  },
+  "106" : {
+    "password" : "6473",
+    "ron" : 4600,
+    "dollar" : 50,
+    "euro" : 360,
+    "active" : 1
+  },
+  "107" : {
+    "password" : "3094",
+    "ron" : 700,
+    "dollar" : 170,
+    "euro" : 265,
+    "active" : 1
+  },
+  "108" : {
+    "password" : "2773",
+    "ron" : 2950,
+    "dollar" : 370,
+    "euro" : 95,
+    "active" : 1
+  },
+  "109" : {
+    "password" : "5688",
+    "ron" : 1550,
+    "dollar" : 240,
+    "euro" : 245,
+    "active" : 1
+  },
+  "110" : {
+    "password" : "0392",
+    "ron" : 4300,
+    "dollar" : 175,
+    "euro" : 255,
+    "active" : 1
+  },
+  "111" : {
+    "password" : "9418",
+    "ron" : 4950,
+    "dollar" : 145,
+    "euro" : 120,
+    "active" : 1
+  },
+  "112" : {
+    "password" : "1838",
+    "ron" : 2000,
+    "dollar" : 380,
+    "euro" : 305,
+    "active" : 1
+  },
+  "113" : {
+    "password" : "2435",
+    "ron" : 1650,
+    "dollar" : 120,
+    "euro" : 235,
+    "active" : 1
+  },
+  "114" : {
+    "password" : "5311",
+    "ron" : 3850,
+    "dollar" : 195,
+    "euro" : 430,
+    "active" : 1
+  },
+  "115" : {
+    "password" : "9593",
+    "ron" : 2250,
+    "dollar" : 45,
+    "euro" : 200,
+    "active" : 1
+  },
+  "116" : {
+    "password" : "9525",
+    "ron" : 4550,
+    "dollar" : 205,
+    "euro" : 375,
+    "active" : 1
+  },
+  "117" : {
+    "password" : "1065",
+    "ron" : 50,
+    "dollar" : 275,
+    "euro" : 435,
+    "active" : 1
+  },
+  "118" : {
+    "password" : "9234",
+    "ron" : 4750,
+    "dollar" : 160,
+    "euro" : 95,
+    "active" : 1
+  },
+  "119" : {
+    "password" : "7733",
+    "ron" : 3600,
+    "dollar" : 360,
+    "euro" : 45,
+    "active" : 1
+  },
+  "120" : {
+    "password" : "4696",
+    "ron" : 1150,
+    "dollar" : 330,
+    "euro" : 260,
+    "active" : 1
+  },
+  "121" : {
+    "password" : "7702",
+    "ron" : 4050,
+    "dollar" : 415,
+    "euro" : 265,
+    "active" : 1
+  },
+  "122" : {
+    "password" : "9791",
+    "ron" : 3900,
+    "dollar" : 435,
+    "euro" : 190,
+    "active" : 1
+  },
+  "123" : {
+    "password" : "5361",
+    "ron" : 3100,
+    "dollar" : 315,
+    "euro" : 300,
+    "active" : 1
+  },
+  "124" : {
+    "password" : "5914",
+    "ron" : 350,
+    "dollar" : 460,
+    "euro" : 235,
+    "active" : 1
+  },
+  "125" : {
+    "password" : "3999",
+    "ron" : 1550,
+    "dollar" : 455,
+    "euro" : 415,
+    "active" : 1
+  },
+  "126" : {
+    "password" : "8040",
+    "ron" : 3350,
+    "dollar" : 60,
+    "euro" : 305,
+    "active" : 1
+  },
+  "127" : {
+    "password" : "3221",
+    "ron" : 150,
+    "dollar" : 460,
+    "euro" : 405,
+    "active" : 1
+  },
+  "128" : {
+    "password" : "2701",
+    "ron" : 4850,
+    "dollar" : 35,
+    "euro" : 215,
+    "active" : 1
+  },
+  "129" : {
+    "password" : "1689",
+    "ron" : 350,
+    "dollar" : 190,
+    "euro" : 100,
+    "active" : 1
+  },
+  "130" : {
+    "password" : "5677",
+    "ron" : 3000,
+    "dollar" : 425,
+    "euro" : 245,
+    "active" : 1
+  },
+  "131" : {
+    "password" : "6436",
+    "ron" : 3050,
+    "dollar" : 335,
+    "euro" : 465,
+    "active" : 1
+  },
+  "132" : {
+    "password" : "9895",
+    "ron" : 250,
+    "dollar" : 0,
+    "euro" : 205,
+    "active" : 1
+  },
+  "133" : {
+    "password" : "1630",
+    "ron" : 250,
+    "dollar" : 145,
+    "euro" : 240,
+    "active" : 1
+  },
+  "134" : {
+    "password" : "0874",
+    "ron" : 4900,
+    "dollar" : 360,
+    "euro" : 485,
+    "active" : 1
+  },
+  "135" : {
+    "password" : "6625",
+    "ron" : 2250,
+    "dollar" : 375,
+    "euro" : 420,
+    "active" : 1
+  },
+  "136" : {
+    "password" : "1505",
+    "ron" : 1650,
+    "dollar" : 185,
+    "euro" : 40,
+    "active" : 1
+  },
+  "137" : {
+    "password" : "1182",
+    "ron" : 1950,
+    "dollar" : 460,
+    "euro" : 415,
+    "active" : 1
+  },
+  "138" : {
+    "password" : "1079",
+    "ron" : 4100,
+    "dollar" : 240,
+    "euro" : 75,
+    "active" : 1
+  },
+  "139" : {
+    "password" : "9100",
+    "ron" : 100,
+    "dollar" : 455,
+    "euro" : 145,
+    "active" : 1
+  },
+  "140" : {
+    "password" : "4828",
+    "ron" : 4050,
+    "dollar" : 100,
+    "euro" : 425,
+    "active" : 1
+  },
+  "141" : {
+    "password" : "0299",
+    "ron" : 1800,
+    "dollar" : 410,
+    "euro" : 185,
+    "active" : 1
+  },
+  "142" : {
+    "password" : "4223",
+    "ron" : 2750,
+    "dollar" : 470,
+    "euro" : 150,
+    "active" : 1
+  },
+  "143" : {
+    "password" : "8278",
+    "ron" : 850,
+    "dollar" : 30,
+    "euro" : 10,
+    "active" : 1
+  },
+  "144" : {
+    "password" : "9475",
+    "ron" : 1050,
+    "dollar" : 375,
+    "euro" : 305,
+    "active" : 1
+  },
+  "145" : {
+    "password" : "6561",
+    "ron" : 4350,
+    "dollar" : 270,
+    "euro" : 90,
+    "active" : 1
+  },
+  "146" : {
+    "password" : "9950",
+    "ron" : 1950,
+    "dollar" : 410,
+    "euro" : 470,
+    "active" : 1
+  },
+  "147" : {
+    "password" : "6011",
+    "ron" : 4250,
+    "dollar" : 200,
+    "euro" : 425,
+    "active" : 1
+  },
+  "148" : {
+    "password" : "6597",
+    "ron" : 4800,
+    "dollar" : 125,
+    "euro" : 420,
+    "active" : 1
+  },
+  "149" : {
+    "password" : "4809",
+    "ron" : 1400,
+    "dollar" : 135,
+    "euro" : 60,
+    "active" : 1
+  },
+  "150" : {
+    "password" : "5860",
+    "ron" : 3100,
+    "dollar" : 460,
+    "euro" : 405,
+    "active" : 1
+  },
+  "151" : {
+    "password" : "5751",
+    "ron" : 2150,
+    "dollar" : 80,
+    "euro" : 135,
+    "active" : 1
+  },
+  "152" : {
+    "password" : "2154",
+    "ron" : 3100,
+    "dollar" : 225,
+    "euro" : 355,
+    "active" : 1
+  },
+  "153" : {
+    "password" : "8212",
+    "ron" : 3800,
+    "dollar" : 270,
+    "euro" : 255,
+    "active" : 1
+  },
+  "154" : {
+    "password" : "1524",
+    "ron" : 2550,
+    "dollar" : 205,
+    "euro" : 195,
+    "active" : 1
+  },
+  "155" : {
+    "password" : "3231",
+    "ron" : 4450,
+    "dollar" : 250,
+    "euro" : 50,
+    "active" : 1
+  },
+  "156" : {
+    "password" : "9802",
+    "ron" : 1400,
+    "dollar" : 85,
+    "euro" : 360,
+    "active" : 1
+  },
+  "157" : {
+    "password" : "5004",
+    "ron" : 1900,
+    "dollar" : 150,
+    "euro" : 425,
+    "active" : 1
+  },
+  "158" : {
+    "password" : "7816",
+    "ron" : 400,
+    "dollar" : 175,
+    "euro" : 55,
+    "active" : 1
+  },
+  "159" : {
+    "password" : "4185",
+    "ron" : 2800,
+    "dollar" : 20,
+    "euro" : 395,
+    "active" : 1
+  },
+  "160" : {
+    "password" : "6104",
+    "ron" : 4150,
+    "dollar" : 205,
+    "euro" : 420,
+    "active" : 1
+  },
+  "161" : {
+    "password" : "3060",
+    "ron" : 3500,
+    "dollar" : 165,
+    "euro" : 130,
+    "active" : 1
+  },
+  "162" : {
+    "password" : "0482",
+    "ron" : 3200,
+    "dollar" : 135,
+    "euro" : 350,
+    "active" : 1
+  },
+  "163" : {
+    "password" : "2880",
+    "ron" : 2300,
+    "dollar" : 105,
+    "euro" : 265,
+    "active" : 1
+  },
+  "164" : {
+    "password" : "9277",
+    "ron" : 1200,
+    "dollar" : 10,
+    "euro" : 225,
+    "active" : 1
+  },
+  "165" : {
+    "password" : "0793",
+    "ron" : 4800,
+    "dollar" : 435,
+    "euro" : 425,
+    "active" : 1
+  },
+  "166" : {
+    "password" : "7062",
+    "ron" : 2700,
+    "dollar" : 370,
+    "euro" : 325,
+    "active" : 1
+  },
+  "167" : {
+    "password" : "4586",
+    "ron" : 4250,
+    "dollar" : 355,
+    "euro" : 110,
+    "active" : 1
+  },
+  "168" : {
+    "password" : "9921",
+    "ron" : 2850,
+    "dollar" : 290,
+    "euro" : 80,
+    "active" : 1
+  },
+  "169" : {
+    "password" : "3873",
+    "ron" : 4000,
+    "dollar" : 155,
+    "euro" : 280,
+    "active" : 1
+  },
+  "170" : {
+    "password" : "7872",
+    "ron" : 400,
+    "dollar" : 140,
+    "euro" : 60,
+    "active" : 1
+  },
+  "171" : {
+    "password" : "0447",
+    "ron" : 4850,
+    "dollar" : 105,
+    "euro" : 490,
+    "active" : 1
+  },
+  "172" : {
+    "password" : "2898",
+    "ron" : 650,
+    "dollar" : 430,
+    "euro" : 45,
+    "active" : 1
+  },
+  "173" : {
+    "password" : "5534",
+    "ron" : 4750,
+    "dollar" : 470,
+    "euro" : 320,
+    "active" : 1
+  },
+  "174" : {
+    "password" : "8131",
+    "ron" : 200,
+    "dollar" : 30,
+    "euro" : 5,
+    "active" : 1
+  },
+  "175" : {
+    "password" : "6629",
+    "ron" : 4400,
+    "dollar" : 380,
+    "euro" : 135,
+    "active" : 1
+  },
+  "176" : {
+    "password" : "6693",
+    "ron" : 1950,
+    "dollar" : 55,
+    "euro" : 345,
+    "active" : 1
+  },
+  "177" : {
+    "password" : "4611",
+    "ron" : 3500,
+    "dollar" : 45,
+    "euro" : 200,
+    "active" : 1
+  },
+  "178" : {
+    "password" : "3528",
+    "ron" : 2850,
+    "dollar" : 385,
+    "euro" : 150,
+    "active" : 1
+  },
+  "179" : {
+    "password" : "3972",
+    "ron" : 3250,
+    "dollar" : 220,
+    "euro" : 475,
+    "active" : 1
+  },
+  "180" : {
+    "password" : "8719",
+    "ron" : 2250,
+    "dollar" : 420,
+    "euro" : 0,
+    "active" : 1
+  },
+  "181" : {
+    "password" : "9466",
+    "ron" : 3600,
+    "dollar" : 205,
+    "euro" : 395,
+    "active" : 1
+  },
+  "182" : {
+    "password" : "9767",
+    "ron" : 200,
+    "dollar" : 210,
+    "euro" : 245,
+    "active" : 1
+  },
+  "183" : {
+    "password" : "7473",
+    "ron" : 3850,
+    "dollar" : 165,
+    "euro" : 110,
+    "active" : 1
+  },
+  "184" : {
+    "password" : "8436",
+    "ron" : 2850,
+    "dollar" : 330,
+    "euro" : 405,
+    "active" : 1
+  },
+  "185" : {
+    "password" : "3033",
+    "ron" : 3000,
+    "dollar" : 170,
+    "euro" : 10,
+    "active" : 1
+  },
+  "186" : {
+    "password" : "3003",
+    "ron" : 1450,
+    "dollar" : 495,
+    "euro" : 465,
+    "active" : 1
+  },
+  "187" : {
+    "password" : "6638",
+    "ron" : 2000,
+    "dollar" : 105,
+    "euro" : 490,
+    "active" : 1
+  },
+  "188" : {
+    "password" : "8040",
+    "ron" : 4500,
+    "dollar" : 65,
+    "euro" : 455,
+    "active" : 1
+  },
+  "189" : {
+    "password" : "0895",
+    "ron" : 3400,
+    "dollar" : 430,
+    "euro" : 135,
+    "active" : 1
+  },
+  "190" : {
+    "password" : "0516",
+    "ron" : 4550,
+    "dollar" : 185,
+    "euro" : 185,
+    "active" : 1
+  },
+  "191" : {
+    "password" : "6136",
+    "ron" : 2150,
+    "dollar" : 345,
+    "euro" : 300,
+    "active" : 1
+  },
+  "192" : {
+    "password" : "0693",
+    "ron" : 4850,
+    "dollar" : 10,
+    "euro" : 470,
+    "active" : 1
+  },
+  "193" : {
+    "password" : "8394",
+    "ron" : 3200,
+    "dollar" : 170,
+    "euro" : 140,
+    "active" : 1
+  },
+  "194" : {
+    "password" : "2664",
+    "ron" : 650,
+    "dollar" : 435,
+    "euro" : 395,
+    "active" : 1
+  },
+  "195" : {
+    "password" : "1240",
+    "ron" : 1650,
+    "dollar" : 240,
+    "euro" : 155,
+    "active" : 1
+  },
+  "196" : {
+    "password" : "3438",
+    "ron" : 3800,
+    "dollar" : 165,
+    "euro" : 15,
+    "active" : 1
+  },
+  "197" : {
+    "password" : "6419",
+    "ron" : 4350,
+    "dollar" : 355,
+    "euro" : 235,
+    "active" : 1
+  },
+  "198" : {
+    "password" : "8027",
+    "ron" : 4200,
+    "dollar" : 220,
+    "euro" : 345,
+    "active" : 1
+  },
+  "199" : {
+    "password" : "2059",
+    "ron" : 1400,
+    "dollar" : 365,
+    "euro" : 95,
+    "active" : 1
+  },
+  "200" : {
+    "password" : "5560",
+    "ron" : 400,
+    "dollar" : 195,
+    "euro" : 270,
+    "active" : 1
+  }
+}
