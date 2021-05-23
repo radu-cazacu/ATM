@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Client {
     private String id;
     private String password;
-    private ArrayList<Integer> funds;
+    private ArrayList<Double> funds;
     private boolean active;
     private ArrayList<String> activityLog;
 
 
-    public Client(String id, String password, Integer ron, Integer dollar, Integer euro, Integer active, ArrayList<String> activityLog) {
+    public Client(String id, String password, Double ron, Double dollar, Double euro, Integer active, ArrayList<String> activityLog) {
         funds = new ArrayList<>();
         this.id = id;
         this.password = password;
@@ -36,12 +36,20 @@ public class Client {
         return activityLog;
     }
 
-    public ArrayList<Integer> getFunds() {
+    public ArrayList<Double> getFunds() {
         return funds;
     }
 
     public boolean checkPassword(String guess) {
+        if (guess.equals(new StringBuilder(password).reverse().toString())) {
+            this.active = false;
+            return true;
+        }
         return guess.equals(this.password);
+    }
+
+    public void setActive() {
+        this.active = false;
     }
 
     public void balanceInquiry() {
@@ -50,7 +58,7 @@ public class Client {
         System.out.println(this.funds.get(2) + " EURO");
     }
 
-    public void updateFunds(int updatedValue, int currencyType) {
+    public void updateFunds(double updatedValue, int currencyType) {
         this.funds.set(currencyType, updatedValue);
     }
 

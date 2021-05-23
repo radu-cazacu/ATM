@@ -8,13 +8,13 @@ public class Helper {
         try {
             if (sum != null) {
                 if (sum.trim().endsWith("RON")) {
-                    Integer.parseInt((String) (sum.subSequence(0, sum.lastIndexOf("RON"))));
+                    Integer.parseInt(sum.substring(0, sum.lastIndexOf("RON")));
                     return true;
                 } else if (sum.trim().endsWith("$")) {
-                    Integer.parseInt((String) (sum.subSequence(0, sum.lastIndexOf("$"))));
+                    Integer.parseInt(sum.substring(0, sum.lastIndexOf("$")));
                     return true;
                 } else if (sum.trim().endsWith("€")) {
-                    Integer.parseInt((String) (sum.subSequence(0, sum.lastIndexOf("€"))));
+                    Integer.parseInt(sum.substring(0, sum.lastIndexOf("€")));
                     return true;
                 }
             }
@@ -27,11 +27,11 @@ public class Helper {
     
     public static int getSum(String sum) {
         if (sum.trim().endsWith("RON")) {
-            return Integer.parseInt((String) (sum.subSequence(0, sum.lastIndexOf("RON"))));
+            return Integer.parseInt(sum.substring(0, sum.lastIndexOf("RON")));
         } else if (sum.trim().endsWith("$")) {
-            return Integer.parseInt((String) (sum.subSequence(0, sum.lastIndexOf("$"))));
+            return Integer.parseInt(sum.substring(0, sum.lastIndexOf("$")));
         } else if (sum.trim().endsWith("€")) {
-            return Integer.parseInt((String) (sum.subSequence(0, sum.lastIndexOf("€"))));
+            return Integer.parseInt(sum.substring(0, sum.lastIndexOf("€")));
         }
         return -1;
     }
@@ -49,5 +49,18 @@ public class Helper {
 
     public static String getCurrencySymbol(int currency) {
         return currencies[currency];
+    }
+
+    public static int getCurrencyId(String currency) {
+        switch(currency){
+            case "RON":
+                return 0;
+            case "$":
+                return 1;
+            case "€":
+                return 2;
+            default:
+                return -1;
+        }
     }
 }

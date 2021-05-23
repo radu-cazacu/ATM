@@ -7,13 +7,12 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
 
 import java.io.*;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static java.lang.Math.abs;
@@ -21,26 +20,25 @@ import static java.lang.Math.abs;
 public class Atm {
     private final int MAX_TRIES = 3;
     private final int MAX_WITHDRAWABLE_SUM_RON = 30;
+    private final String ADMIN_ID = "000";
 
     private Client currClient;
-    private ArrayList<Integer> funds;
+    private ArrayList<Double> funds;
     private double[][] exchangeRates;
-    Scanner inputScanner;
-    Menu menu;
+    private Scanner inputScanner;
 
     public Atm() {
         try {
             inputScanner = new Scanner(System.in);
-            menu = new Menu();
             File file = new File(".\\funds.txt");
             Scanner scanner = new Scanner(file);
             funds = new ArrayList<>();
             while(scanner.hasNextLine()){
                 String line = scanner.nextLine();
                 String[] values = line.split(" ");
-                funds.add(Integer.parseInt(values[0]));
-                funds.add(Integer.parseInt(values[1]));
-                funds.add(Integer.parseInt(values[2]));
+                funds.add(Double.parseDouble(values[0]));
+                funds.add(Double.parseDouble(values[1]));
+                funds.add(Double.parseDouble(values[2]));
             }
             setExchangeRates();
             scanner.close();
@@ -66,9 +64,9 @@ public class Atm {
                 this.currClient = new Client(
                         id,
                         clientInfo.get("password").asText(),
-                        clientInfo.get("ron").asInt(),
-                        clientInfo.get("dollar").asInt(),
-                        clientInfo.get("euro").asInt(),
+                        clientInfo.get("ron").asDouble(),
+                        clientInfo.get("dollar").asDouble(),
+                        clientInfo.get("euro").asDouble(),
                         clientInfo.get("active").asInt(),
                         activityLog
                 );
@@ -168,59 +166,102 @@ public class Atm {
     }
 
 
-    public void run() {
-        switch(isClient()) {
-            case 1:
-                if(logIn()) {
-                    proceedAsClient(getClientOption());
-                }
-                break;
-            case 2:
-                proceedAsNotClient();
-                break;
-            default:
-                menu.displayInvalidInput();
-        }
-
-        updateFunds();
-        updateClient();
-        inputScanner.close();
+    private boolean isAdmin(String id) {
+        return id.equals(ADMIN_ID);
     }
 
-    private int isClient() {
-        menu.displayInitialMenu();
+    private void proceedAsAdmin() {
+        System.out.println("ADMIN MODE");
+        String command;
 
-        try {
-            int option = Integer.parseInt(inputScanner.nextLine());
-            return (option > 0 && option < 3) ? option : -1;
-        } catch (Exception e) {
-            menu.displayInvalidInput();
-            return -1;
+        do {
+            System.out.print("*");
+            command = inputScanner.nextLine();
+            adminExecuteCommand(command);
+        } while(!command.equalsIgnoreCase("exit"));
+    }
+
+    private void adminExecuteCommand(String command) {
+        String commandType;
+        String commandArgument;
+        if (command.contains("_")) {
+            commandType = command.substring(0, command.lastIndexOf("_"));
+            commandArgument = command.substring(command.lastIndexOf("_") + 1);
+            switch (commandType) {
+                case("ADD_MONEY"):
+                    adminAddMoney(commandArgument);
+                    break;
+                case("WITHDRAW_MONEY"):
+                    adminWithdrawMoney(commandArgument);
+                    break;
+                case("TRACE"):
+                    adminTrace(commandArgument);
+                    break;
+                case("UNLOCK"):
+                    adminUnlock(commandArgument);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void adminUnlock(String commandArgument) {
+        initializeClient(commandArgument);
+        currClient.setActive();
+    }
+
+    private void adminTrace(String commandArgument) {
+        initializeClient(commandArgument);
+        ArrayList<String> logs = currClient.getActivityLog();
+        for(String activity : logs) {
+            System.out.println(activity);
+        }
+    }
+
+    private void adminWithdrawMoney(String commandArgument) {
+        if(Helper.checkValidSum(commandArgument)) {
+            double sum = Helper.getSum(commandArgument);
+            int currency = Helper.getCurrency(commandArgument);
+            this.funds.set(currency, this.funds.get(currency) - sum);
+        }
+    }
+
+    private void adminAddMoney(String commandArgument) {
+        if(Helper.checkValidSum(commandArgument)) {
+            double sum = Helper.getSum(commandArgument);
+            int currency = Helper.getCurrency(commandArgument);
+            this.funds.set(currency, this.funds.get(currency) + sum);
         }
     }
 
     private void proceedAsClient(int option) {
-        switch(option) {
-            case 1:
-                currClient.balanceInquiry();
-                break;
-            case 2:
-                withdrawFunds();
-                break;
-            case 3:
-                depositFunds();
-                break;
-            case 4:
-                exchangeFunds();
-                break;
-            default:
-                System.out.println("Invalid choice.");
+        if(currClient.isActive()) {
+            switch (option) {
+                case 1:
+                    currClient.balanceInquiry();
+                    break;
+                case 2:
+                    withdrawFunds();
+                    break;
+                case 3:
+                    depositFunds();
+                    break;
+                case 4:
+                    exchangeFunds();
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } else {
+            System.out.println("Account inactive.");
         }
+
     }
 
-    private void proceedAsNotClient() {
+    private void proceedAsNotClient(String id) {
         int option = -1;
-        menu.displayOutsideClientMessage();
+        Menu.displayOutsideClientMessage();
 
         try {
             option = Integer.parseInt(inputScanner.nextLine());
@@ -233,7 +274,9 @@ public class Atm {
             System.out.print("Enter sum : ");
             String sum = inputScanner.nextLine();
             if(Helper.checkValidSum(sum)) {
-                String logUpdate = "Outside client has withdrawn ";
+                String logUpdate = "Outside client ";
+                logUpdate += id;
+                logUpdate += " has withdrawn ";
                 logUpdate += sum;
                 logUpdate += ".\n";
                 logOutsideClientActivity(logUpdate);
@@ -245,16 +288,7 @@ public class Atm {
 
     private boolean logIn() {
         boolean passCorrect = false;
-
-        System.out.print("Input client code : ");
-
-        while(!initializeClient(inputScanner.nextLine())) {
-            System.out.println("Invalid client code.");
-            System.out.print("Input client code : ");
-        }
-
         System.out.println(currClient);
-
         System.out.print("PIN : ");
 
         for (int i = 0; i < MAX_TRIES; i++) {
@@ -280,15 +314,18 @@ public class Atm {
     }
 
     private int getClientOption() {
-        menu.displayMainMenu();
-        try {
-            int option = Integer.parseInt(inputScanner.nextLine());
-            System.out.println();
-            return (option > 0 && option < 5) ? option : -1;
-        } catch(Exception e) {
-            menu.displayInvalidInput();
-            return -1;
+        if(currClient.isActive()) {
+            Menu.displayMainMenu();
+            try {
+                int option = Integer.parseInt(inputScanner.nextLine());
+                System.out.println();
+                return (option > 0 && option < 5) ? option : -1;
+            } catch (Exception e) {
+                Menu.displayInvalidInput();
+                return -1;
+            }
         }
+        return -1;
     }
 
     private void withdrawFunds()  {
@@ -304,7 +341,7 @@ public class Atm {
             } else if (sum > this.funds.get(currency)) {
                 System.out.println("Insufficient bills in ATM.");
             } else if (sum < abs(MAX_WITHDRAWABLE_SUM_RON - currency * 20)) {
-                menu.displayMinimumWithdrawal(currency);
+                Menu.displayMinimumWithdrawal(currency);
             } else if (sum > this.funds.get(currency) / 10) {
                 System.out.println("The max sum you can withdraw is" + this.funds.get(currency) / 10);
             } else {
@@ -337,8 +374,31 @@ public class Atm {
     }
 
     private void exchangeFunds() {
-    }
+        int exchangeFrom, exchangeTo;
+        double amount;
 
+        try{
+            System.out.print("Exchange from:\n1.RON \n2.$\n3.€\n>");
+            exchangeFrom = Integer.parseInt(inputScanner.nextLine()) - 1;
+
+            System.out.print("To:\n1.RON \n2.$\n3.€\n>");
+            exchangeTo = Integer.parseInt(inputScanner.nextLine()) - 1;
+
+            System.out.print("Enter amount:");
+            amount = Integer.parseInt(inputScanner.nextLine());
+
+            if(currClient.getFunds().get(exchangeFrom) > amount) {
+                currClient.updateFunds(currClient.getFunds().get(exchangeFrom) - amount, exchangeFrom);
+                currClient.updateFunds(currClient.getFunds().get(exchangeTo) + (amount * exchangeRates[exchangeFrom][exchangeTo]), exchangeTo);
+                currClient.updateLog("Exchanged " + amount + Helper.getCurrencySymbol(exchangeFrom) + " to " +
+                        (amount * exchangeRates[exchangeFrom][exchangeTo]) + Helper.getCurrencySymbol(exchangeTo));
+            } else {
+                System.out.println("Insufficient funds.");
+            }
+        } catch(InputMismatchException e) {
+            System.out.println("Invalid input.");
+        }
+    }
 
     @Override
     public String toString() {
@@ -347,7 +407,26 @@ public class Atm {
                 ", currClient=" + currClient +
                 ", funds=" + funds +
                 ", inputScanner=" + inputScanner +
-                ", menu=" + menu +
                 '}';
     }
+
+
+    public void run() {
+        System.out.print("Input client code : ");
+        String id = inputScanner.nextLine();
+        if(initializeClient(id)) {
+            if (logIn()) {
+                proceedAsClient(getClientOption());
+                updateClient();
+            }
+        } else if(isAdmin(id)) {
+            proceedAsAdmin();
+        } else {
+            proceedAsNotClient(id);
+        }
+
+        updateFunds();
+        inputScanner.close();
+    }
+
 }

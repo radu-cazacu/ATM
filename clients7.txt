@@ -1,11 +1,11 @@
 {
   "001" : {
     "password" : "6577",
-    "ron" : 1950,
-    "dollar" : 355,
-    "euro" : 275,
-    "active" : 1,
-    "log" : [ "Deposited 1000RON", "Withdrawn 100RON", "Withdrawn 50RON" ]
+    "ron" : 1400.0,
+    "dollar" : 630.0,
+    "euro" : 265.0,
+    "active" : 0,
+    "log" : [ "Deposited 1000RON", "Withdrawn 100RON", "Withdrawn 50RON", "Deposited 100$", "Deposited 100RON", "Exchanged 100.0$ to 80.0€", "Exchanged 1000.0RON to 250.0$", "Exchanged 100.0$ to 400.0RON", "Exchanged 50.0RON to 10.0€", "Exchanged 100.0€ to 125.0$" ]
   },
   "002" : {
     "password" : "9785",
