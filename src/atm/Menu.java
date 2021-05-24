@@ -31,7 +31,7 @@ public class Menu {
     }
 
     public static void displayOutsideClientMessage() {
-        System.out.println("The bank will take 0.1% commission from the next transaction.");
+        System.out.println("The bank will take 1% commission from the next transaction.");
         System.out.println("Do you agree to continue?");
         displayAcceptPrompt();
     }

@@ -1,9 +1,8 @@
 package atm;
 
 import client.Client;
-import com.fasterxml.jackson.core.JsonParseException;
+
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -15,11 +14,10 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static java.lang.Math.abs;
-
 public class Atm {
     private final int MAX_TRIES = 3;
-    private final int MAX_WITHDRAWABLE_SUM_RON = 30;
+    private final Double[] MIN_WITHDRAW_SUM = {30.0, 10.0, 10.0};
+    private final Double[] WITHDRAW_LIMITATION_THRESHOLD  = {10000.0, 1000.0, 1000.0};
     private final String ADMIN_ID = "000";
 
     private Client currClient;
@@ -52,7 +50,7 @@ public class Atm {
             ObjectMapper mapper = new ObjectMapper();
             ArrayList<String> activityLog = new ArrayList<>();
 
-            JsonNode rootNode = mapper.readValue(new File(".\\clients7.txt"), JsonNode.class);
+            JsonNode rootNode = mapper.readValue(new File(".\\clients.txt"), JsonNode.class);
             JsonNode clientInfo = rootNode.get(id);
 
             if(clientInfo != null) {
@@ -74,12 +72,6 @@ public class Atm {
             }
             return false;
 
-        } catch (JsonParseException e) {
-            e.printStackTrace();
-            return false;
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-            return false;
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -127,9 +119,6 @@ public class Atm {
     private void logOutsideClientActivity(String update) {
         try {
             File file = new File(".\\log.txt");
-            if(!file.exists()){
-                file.createNewFile();
-            }
             FileWriter fileWriter = new FileWriter(file.getName(), true);
             BufferedWriter bw = new BufferedWriter(fileWriter);
             bw.write(update);
@@ -145,7 +134,7 @@ public class Atm {
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
 
         try {
-            JsonNode rootNode = mapper.readValue(new File(".\\clients7.txt"), JsonNode.class);
+            JsonNode rootNode = mapper.readValue(new File(".\\clients.txt"), JsonNode.class);
             JsonNode clientInfo = rootNode.get(currClient.getId());
 
             ((ObjectNode) clientInfo).put("ron", currClient.getFunds().get(0));
@@ -156,7 +145,7 @@ public class Atm {
 
             ((ObjectNode) rootNode).put(currClient.getId(), clientInfo);
 
-            writer.writeValue(Paths.get(".\\clients7.txt").toFile(), rootNode);
+            writer.writeValue(Paths.get(".\\clients.txt").toFile(), rootNode);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -235,6 +224,55 @@ public class Atm {
         }
     }
 
+    private boolean canWithdraw(double amount, int currency) {
+        if (amount > this.funds.get(currency)) {
+            System.out.println("Insufficient bills in ATM.");
+            return false;
+        } else if (amount < MIN_WITHDRAW_SUM[currency]) {
+            Menu.displayMinimumWithdrawal(currency);
+            return false;
+        } else if (this.funds.get(currency) < WITHDRAW_LIMITATION_THRESHOLD[currency] &&
+                    amount > this.funds.get(currency) / 10) {
+            System.out.println("The max sum you can withdraw  " + this.funds.get(currency) / 10 + Helper.getCurrencySymbol(currency));
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private void proceedAsNotClient(String id) {
+        int option = -1;
+        Menu.displayOutsideClientMessage();
+
+        try {
+            option = Integer.parseInt(inputScanner.nextLine());
+        } catch (Exception e) {
+            System.out.println("Invalid input.");
+        }
+
+        if(option == 1) {
+            System.out.print("Enter sum : ");
+            String sum = inputScanner.nextLine();
+
+            if(Helper.checkValidSum(sum)) {
+                double amount = Helper.getSum(sum);
+                int currency = Helper.getCurrency(sum);
+                if(canWithdraw(amount, currency)) {
+                    funds.set(currency, funds.get(currency) - amount + (amount / 100));
+
+                    String logUpdate = "Outside client ";
+                    logUpdate += id;
+                    logUpdate += " has withdrawn ";
+                    logUpdate += sum;
+                    logUpdate += ".\n";
+                    logOutsideClientActivity(logUpdate);
+                }
+            } else {
+                System.out.println("Invalid sum.");
+            }
+        }
+    }
+
     private void proceedAsClient(int option) {
         if(currClient.isActive()) {
             switch (option) {
@@ -257,33 +295,6 @@ public class Atm {
             System.out.println("Account inactive.");
         }
 
-    }
-
-    private void proceedAsNotClient(String id) {
-        int option = -1;
-        Menu.displayOutsideClientMessage();
-
-        try {
-            option = Integer.parseInt(inputScanner.nextLine());
-            System.out.println();
-        } catch (Exception e) {
-            System.out.println("Invalid input.");
-        }
-
-        if(option == 1) {
-            System.out.print("Enter sum : ");
-            String sum = inputScanner.nextLine();
-            if(Helper.checkValidSum(sum)) {
-                String logUpdate = "Outside client ";
-                logUpdate += id;
-                logUpdate += " has withdrawn ";
-                logUpdate += sum;
-                logUpdate += ".\n";
-                logOutsideClientActivity(logUpdate);
-            } else {
-                System.out.println("Invalid sum.");
-            }
-        }
     }
 
     private boolean logIn() {
@@ -333,22 +344,16 @@ public class Atm {
         String line = inputScanner.nextLine();
 
         if(Helper.checkValidSum(line)) {
-            int sum = Helper.getSum(line);
+            int amount = Helper.getSum(line);
             int currency = Helper.getCurrency(line);
 
-            if (sum > currClient.getFunds().get(currency)) {
+            if (amount > currClient.getFunds().get(currency)) {
                 System.out.println("Insufficient funds.");
-            } else if (sum > this.funds.get(currency)) {
-                System.out.println("Insufficient bills in ATM.");
-            } else if (sum < abs(MAX_WITHDRAWABLE_SUM_RON - currency * 20)) {
-                Menu.displayMinimumWithdrawal(currency);
-            } else if (sum > this.funds.get(currency) / 10) {
-                System.out.println("The max sum you can withdraw is" + this.funds.get(currency) / 10);
-            } else {
+            } else if (canWithdraw(amount, currency)) {
                 System.out.println("WITHDRAWING ...");
-                currClient.updateFunds(currClient.getFunds().get(currency) - sum, currency);
-                this.funds.set(currency, this.funds.get(currency) - sum);
-                currClient.updateLog("Withdrawn " + sum + Helper.getCurrencySymbol(currency));
+                currClient.updateFunds(currClient.getFunds().get(currency) - amount, currency);
+                this.funds.set(currency, this.funds.get(currency) - amount);
+                currClient.updateLog("Withdrawn " + amount + Helper.getCurrencySymbol(currency));
             }
         } else {
             System.out.println("Invalid sum.");
