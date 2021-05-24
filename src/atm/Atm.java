@@ -12,6 +12,7 @@ import java.io.*;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Atm {
@@ -21,7 +22,7 @@ public class Atm {
     private final String ADMIN_ID = "000";
 
     private Client currClient;
-    private ArrayList<Double> funds;
+    private List<Double> funds;
     private double[][] exchangeRates;
     private Scanner inputScanner;
 
@@ -48,7 +49,7 @@ public class Atm {
     private boolean initializeClient(String id) {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            ArrayList<String> activityLog = new ArrayList<>();
+            List<String> activityLog = new ArrayList<>();
 
             JsonNode rootNode = mapper.readValue(new File(".\\clients.txt"), JsonNode.class);
             JsonNode clientInfo = rootNode.get(id);
@@ -198,11 +199,12 @@ public class Atm {
     private void adminUnlock(String commandArgument) {
         initializeClient(commandArgument);
         currClient.setActive();
+        updateClient();
     }
 
     private void adminTrace(String commandArgument) {
         initializeClient(commandArgument);
-        ArrayList<String> logs = currClient.getActivityLog();
+        List<String> logs = currClient.getActivityLog();
         for(String activity : logs) {
             System.out.println(activity);
         }
@@ -231,9 +233,10 @@ public class Atm {
         } else if (amount < MIN_WITHDRAW_SUM[currency]) {
             Menu.displayMinimumWithdrawal(currency);
             return false;
-        } else if (this.funds.get(currency) < WITHDRAW_LIMITATION_THRESHOLD[currency] &&
-                    amount > this.funds.get(currency) / 10) {
-            System.out.println("The max sum you can withdraw  " + this.funds.get(currency) / 10 + Helper.getCurrencySymbol(currency));
+        } else if (this.funds.get(currency) < WITHDRAW_LIMITATION_THRESHOLD[currency]
+                && amount > this.funds.get(currency) / 10) {
+            System.out.println("The max sum you can withdraw  " + this.funds.get(currency) / 10 +
+                    Helper.getCurrencySymbol(currency));
             return false;
         } else {
             return true;
@@ -416,22 +419,27 @@ public class Atm {
     }
 
 
-    public void run() {
+    public boolean run() {
         System.out.print("Input client code : ");
         String id = inputScanner.nextLine();
-        if(initializeClient(id)) {
-            if (logIn()) {
-                proceedAsClient(getClientOption());
-                updateClient();
-            }
-        } else if(isAdmin(id)) {
-            proceedAsAdmin();
+        if(id.equals("exit")){
+            inputScanner.close();
+            return false;
         } else {
-            proceedAsNotClient(id);
-        }
+            if (initializeClient(id)) {
+                if (logIn()) {
+                    proceedAsClient(getClientOption());
+                    updateClient();
+                }
+            } else if (isAdmin(id)) {
+                proceedAsAdmin();
+            } else {
+                proceedAsNotClient(id);
+            }
 
-        updateFunds();
-        inputScanner.close();
+            updateFunds();
+            return true;
+        }
     }
 
 }

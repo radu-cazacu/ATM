@@ -1,16 +1,17 @@
 package client;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Client {
     private String id;
     private String password;
-    private ArrayList<Double> funds;
+    private List<Double> funds;
     private boolean active;
-    private ArrayList<String> activityLog;
+    private List<String> activityLog;
 
 
-    public Client(String id, String password, Double ron, Double dollar, Double euro, Integer active, ArrayList<String> activityLog) {
+    public Client(String id, String password, Double ron, Double dollar, Double euro, Integer active, List<String> activityLog) {
         funds = new ArrayList<>();
         this.id = id;
         this.password = password;
@@ -32,11 +33,11 @@ public class Client {
         return active;
     }
 
-    public ArrayList<String> getActivityLog() {
+    public List<String> getActivityLog() {
         return activityLog;
     }
 
-    public ArrayList<Double> getFunds() {
+    public List<Double> getFunds() {
         return funds;
     }
 
@@ -49,7 +50,7 @@ public class Client {
     }
 
     public void setActive() {
-        this.active = false;
+        this.active = true;
     }
 
     public void balanceInquiry() {

@@ -2,34 +2,34 @@
   "001" : {
     "password" : "6577",
     "ron" : 1400.0,
-    "dollar" : 630.0,
+    "dollar" : 530.0,
     "euro" : 265.0,
-    "active" : 0,
-    "log" : [ "Deposited 1000RON", "Withdrawn 100RON", "Withdrawn 50RON", "Deposited 100$", "Deposited 100RON", "Exchanged 100.0$ to 80.0€", "Exchanged 1000.0RON to 250.0$", "Exchanged 100.0$ to 400.0RON", "Exchanged 50.0RON to 10.0€", "Exchanged 100.0€ to 125.0$" ]
+    "active" : 1,
+    "log" : [ "Deposited 1000RON", "Withdrawn 100RON", "Withdrawn 50RON", "Deposited 100$", "Deposited 100RON", "Exchanged 100.0$ to 80.0€", "Exchanged 1000.0RON to 250.0$", "Exchanged 100.0$ to 400.0RON", "Exchanged 50.0RON to 10.0€", "Exchanged 100.0€ to 125.0$", "Withdrawn 100$" ]
   },
   "002" : {
     "password" : "9785",
-    "ron" : 900,
-    "dollar" : 205,
-    "euro" : 135,
+    "ron" : 800.0,
+    "dollar" : 205.0,
+    "euro" : 135.0,
     "active" : 1,
-    "log" : [ ]
+    "log" : [ "Withdrawn 100RON" ]
   },
   "003" : {
     "password" : "1417",
-    "ron" : 4100,
-    "dollar" : 205,
-    "euro" : 45,
+    "ron" : 4000.0,
+    "dollar" : 230.0,
+    "euro" : 45.0,
     "active" : 1,
-    "log" : [ ]
+    "log" : [ "Exchanged 100.0RON to 25.0$" ]
   },
   "004" : {
     "password" : "5554",
-    "ron" : 3700,
-    "dollar" : 5,
-    "euro" : 395,
+    "ron" : 700.0,
+    "dollar" : 755.0,
+    "euro" : 395.0,
     "active" : 1,
-    "log" : [ ]
+    "log" : [ "Exchanged 3000.0RON to 750.0$" ]
   },
   "005" : {
     "password" : "0235",
@@ -1137,11 +1137,11 @@
   },
   "143" : {
     "password" : "0611",
-    "ron" : 3450,
-    "dollar" : 290,
-    "euro" : 355,
+    "ron" : 450.0,
+    "dollar" : 290.0,
+    "euro" : 355.0,
     "active" : 1,
-    "log" : [ ]
+    "log" : [ "Withdrawn 3000RON" ]
   },
   "144" : {
     "password" : "8571",

@@ -1,1 +1,4 @@
 Outside client 564 has withdrawn 100RON.
+Outside client 543 has withdrawn 10000RON.
+Outside client 00 has withdrawn 1000RON.
+Outside client 342 has withdrawn 1000RON.
